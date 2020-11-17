@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "7bd1ce46-f3e9-4412-91c9-099ebf611168",
+		"name": "Test_API_Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delete ",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/employees/delete/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employees",
+						"delete",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "Luis",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Vanegas",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "luisangel@lavm.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "213123123",
+							"type": "text"
+						},
+						{
+							"key": "organization",
+							"value": "lavm",
+							"type": "text"
+						},
+						{
+							"key": "designation",
+							"value": "DevOps",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "8000000",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/employees/add/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employees",
+						"add",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Luis",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Vanegas",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "luisangel@lavm.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "213123123",
+							"type": "text"
+						},
+						{
+							"key": "organization",
+							"value": "lavm",
+							"type": "text"
+						},
+						{
+							"key": "designation",
+							"value": "DevOps",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "8000000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/employees/edit/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employees",
+						"edit",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/employees/findall/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employees",
+						"findall",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/employees/find/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employees",
+						"find",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

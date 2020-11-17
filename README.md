@@ -1,2 +1,61 @@
 # crud_mysql
 CRUD (Create, Read, Update, Delete) con MySQL, Express, Sequelize, NodeJS
+
+## Creación de la Base de datos
+Crear la BD con el siguiente script 
+```sql
+CREATE DATABASE node_mysql_crud_db;
+CREATE  TABLE IF NOT EXISTS `employees` (
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `first_name` VARCHAR(255) NOT NULL,
+  `last_name` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `phone` VARCHAR(50) NOT NULL,
+  `organization` VARCHAR(255) NOT NULL,
+  `designation` VARCHAR(100) NOT NULL,
+  `salary` DECIMAL(11,2) UNSIGNED DEFAULT 0.00,
+  `status` TINYINT UNSIGNED DEFAULT 0,
+  `is_deleted` TINYINT UNSIGNED DEFAULT 0,
+  `created_at` DATETIME NOT NULL,
+  `updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+INSERT INTO `node_mysql_crud_db`.`employees` (`first_name`, `last_name`, `email`, `phone`, `organization`, `designation`, `salary`, `status`, `is_deleted`, `created_at`) VALUES ('Luis', 'vanegas', 'luis@lavm.com', '1234567890', 'BR Softech Pvt Ltd', 'Full Stack Developer', '500.00', '1', '0', '2019-11-19 03:30:30');
+INSERT INTO `node_mysql_crud_db`.`employees` (`first_name`, `last_name`, `email`, `phone`, `organization`, `designation`, `salary`, `status`, `is_deleted`, `created_at`) VALUES ('Luis2', 'vanegas', 'luis2@lavm.com', '9876543210', 'RG Infotech Jaipur', 'PHP Developer', '450.00', '1', '0', '2019-11-19 03:35:30');
+```
+Modificar el archivo: `config/db.config.js` para la conexión.
+
+## Ejecutar la app
+Ejecutar dentro del proyecto:
+```
+npm install
+```
+
+```
+npm start
+```
+
+Abre [http://localhost:5000](http://localhost:5000) en el navegador.
+
+
+## Navegar en la API: 
+
+Rutas: 
+* Mostrar Todos:
+[http://localhost:5000/api/employees/findall/](http://localhost:5000/api/employees/findall/)
+* Agregar:
+[http://localhost:5000/api/employees/add/](http://localhost:5000/api/employees/add/)
+
+* Buscar:
+[http://localhost:5000/api/employees/find/:id](http://localhost:5000/api/employees/find/:id)
+
+* Editar:
+[http://localhost:5000/api/employees/edit/:id](http://localhost:5000/api/employees/edit/:id)
+
+* Eliminar:
+[http://localhost:5000/api/employees/delete/:id](http://localhost:5000/api/employees/delete/:id)
+
+Script de Postman para pruebas:
+[Test_API.postman_collection.json](Test_API.postman_collection.json)
+
+
