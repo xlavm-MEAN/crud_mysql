@@ -56,6 +56,6 @@ Rutas:
 [http://localhost:5000/api/employees/delete/:id](http://localhost:5000/api/employees/delete/:id)
 
 Script de Postman para pruebas:
-[Test_API.postman_collection.json](Test_API.postman_collection.json)
+[test_api_postman.json](test_api_postman.json)
 
 
